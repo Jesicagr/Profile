@@ -22,7 +22,7 @@ export default function BackButton() {
             }}
             className="hover:text-white transition-colors"
         >
-            &larr; Volver a Habilidades
+            &larr; Volver
         </button>
     );
 }
