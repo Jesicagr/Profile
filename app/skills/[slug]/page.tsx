@@ -24,14 +24,19 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
                 &larr; Volver a Habilidades
             </Link>
 
-            <div className="glass-panel" style={{ padding: '3rem' }}>
+            <div
+                className="glass-panel"
+                style={{
+                    padding: '3rem',
+                    viewTransitionName: `skill-card-${category.slug}`
+                }}
+            >
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '3rem' }}>
-                    {/* The Transition Target: Matching viewTransitionName */}
+                    {/* Icon without transition name now */}
                     <span
                         style={{
                             fontSize: '5rem',
                             marginBottom: '1rem',
-                            viewTransitionName: `skill-icon-${category.slug}`
                         }}
                     >
                         {category.icon}

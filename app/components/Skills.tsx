@@ -13,14 +13,18 @@ export default function Skills() {
                             href={`/skills/${category.slug}`}
                             key={category.slug}
                             className="glass-panel"
-                            style={{ display: 'block', textDecoration: 'none', transition: 'all 0.3s ease' }}
+                            style={{
+                                display: 'block',
+                                textDecoration: 'none',
+                                transition: 'all 0.3s ease',
+                                viewTransitionName: `skill-card-${category.slug}`
+                            }}
                         >
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                                {/* The Transition Source */}
+                                {/* Icon without transition name now, as container handles it */}
                                 <span
                                     style={{
                                         fontSize: '2rem',
-                                        viewTransitionName: `skill-icon-${category.slug}`
                                     }}
                                 >
                                     {category.icon}
