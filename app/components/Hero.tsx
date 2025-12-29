@@ -9,10 +9,10 @@ export default function Hero() {
                     Desarrollador Full Stack apasionado por construir webs de alto rendimiento y experiencias digitales asombrosas.
                 </p>
                 <div className="hero-buttons">
-                    <a href="#projects" className="btn btn-primary">
+                    <a href="/projects" className="btn btn-primary">
                         Ver Proyectos
                     </a>
-                    <a href="#contact" className="btn btn-secondary">
+                    <a href="/contact" className="btn btn-secondary">
                         Contáctame
                     </a>
                 </div>

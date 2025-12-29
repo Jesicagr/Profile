@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,14 +18,10 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-        e.preventDefault();
-        setIsOpen(false); // Close menu on click
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+    // Close menu when route changes
+    useEffect(() => {
+        setIsOpen(false);
+    }, [pathname]);
 
     return (
         <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -36,21 +34,21 @@ export default function Navbar() {
             </button>
 
             <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-                <a href="#about" onClick={(e) => scrollToSection(e, "about")} className="nav-link">
+                <Link href="/about" className="nav-link">
                     Sobre Mí
-                </a>
-                <a href="#skills" onClick={(e) => scrollToSection(e, "skills")} className="nav-link">
+                </Link>
+                <Link href="/skills" className="nav-link">
                     Habilidades
-                </a>
-                <a href="#projects" onClick={(e) => scrollToSection(e, "projects")} className="nav-link">
+                </Link>
+                <Link href="/projects" className="nav-link">
                     Proyectos
-                </a>
-                <a href="#experience" onClick={(e) => scrollToSection(e, "experience")} className="nav-link">
+                </Link>
+                <Link href="/about" className="nav-link"> {/* Experience is in About now */}
                     Experiencia
-                </a>
-                <a href="#contact" onClick={(e) => scrollToSection(e, "contact")} className="nav-link" style={{ color: 'var(--primary)' }}>
+                </Link>
+                <Link href="/contact" className="nav-link" style={{ color: 'var(--primary)' }}>
                     Contacto
-                </a>
+                </Link>
             </div>
         </nav>
     );
