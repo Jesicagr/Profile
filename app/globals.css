@@ -97,7 +97,11 @@ a {
 }
 
 ::view-transition-group(*) {
-  animation-duration: 0.6s;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Bouncy Spring Effect */
+  z-index: 100;
+  /* Ensure it flies on top */
 }
 
 ::view-transition-old(root),
