@@ -92,6 +92,14 @@ a {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*) {
+  animation-duration: 0.6s;
+}
+
 .grid-responsive {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

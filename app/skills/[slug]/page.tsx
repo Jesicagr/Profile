@@ -1,5 +1,5 @@
 import { skillCategories } from "../../data/skills";
-import Link from "next/link";
+import BackButton from "../../components/BackButton";
 import { notFound } from "next/navigation";
 
 // Generate static params for all skills to be SSG compatible
@@ -20,9 +20,7 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
 
     return (
         <main className="container" style={{ paddingTop: '8rem', paddingBottom: '4rem', minHeight: '100vh' }}>
-            <Link href="/#skills" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', color: '#a1a1aa', textDecoration: 'none' }}>
-                &larr; Volver a Habilidades
-            </Link>
+            <BackButton />
 
             <div
                 className="glass-panel"
