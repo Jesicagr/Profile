@@ -7,7 +7,7 @@ export default function BackButton() {
 
     return (
         <button
-            onClick={() => router.push('/skills')}
+            onClick={() => router.back()}
             style={{
                 background: 'none',
                 border: 'none',
