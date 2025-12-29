@@ -9,7 +9,7 @@ export default function Projects() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
                     {projects.map((project, index) => (
-                        <div key={project.slug} className="glass-panel" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '3rem', padding: '3rem', position: 'relative', overflow: 'hidden' }}>
+                        <div key={project.slug} className="glass-panel project-card">
                             {/* Enlace principal que cubre toda la tarjeta */}
                             <Link
                                 href={`/projects/${project.slug}`}

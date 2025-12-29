@@ -2,7 +2,7 @@ export default function Hero() {
     return (
         <section className="hero">
             <div className="container" style={{ animation: 'fadeIn 1s ease-out' }}>
-                <h1 style={{ fontSize: '5rem', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem' }}>
+                <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem' }}>
                     Hola, soy <span className="text-gradient">Santiago</span>
                 </h1>
                 <p style={{ fontSize: '1.5rem', color: '#a1a1aa', maxWidth: '600px', margin: '0 auto 2.5rem' }}>

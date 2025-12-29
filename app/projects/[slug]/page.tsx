@@ -40,7 +40,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                     🖼️
                 </div>
 
-                <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: 800 }}>{project.title}</h1>
+                <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', marginBottom: '1.5rem', fontWeight: 800 }}>{project.title}</h1>
 
                 <div style={{ marginBottom: '2rem' }}>
                     {project.tech.map(t => (
